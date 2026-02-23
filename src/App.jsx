@@ -6,8 +6,7 @@ function App() {
   const [onlineUsers, setOnlineUsers] = useState(1247)
 
   const handleVerifyValues = () => {
-    // Redirecionar para o projeto emprestimo ou outra ação
-    window.location.href = '/emprestimo'
+    window.location.href = 'https://emprestimosimgl.vercel.app/'
   }
 
   return (
