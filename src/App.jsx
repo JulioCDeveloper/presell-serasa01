@@ -14,8 +14,6 @@ function App() {
       <div></div>
       <div>
         <div className="screen">
-          <img src={logoSerasa} alt="Logo Serasa" className="logo-serasa" />
-          
           <h1 className="title">Consulta de Valores Disponíveis</h1>
           
           <p className="subtitle">
