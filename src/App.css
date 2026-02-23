@@ -1,0 +1,179 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 550px) 1fr;
+  min-height: 100vh;
+  background: #ec4899;
+}
+
+.container > *:nth-child(1),
+.container > *:nth-child(3) {
+  background: transparent;
+}
+
+.container > *:nth-child(2) {
+  padding: 3rem 2.5rem;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 450px;
+}
+
+.logo-serasa {
+  width: 200px;
+  max-width: 100%;
+  margin-bottom: 2.5rem;
+  filter: brightness(0) invert(1);
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 2.2rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.btn-primary {
+  background-color: white;
+  color: #ec4899;
+  border: 3px solid white;
+  padding: 1rem 3rem;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.3px;
+}
+
+.btn-primary:hover {
+  background-color: #fce7f3;
+  color: #db2777;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-verify {
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 420px;
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-verify:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.4);
+}
+
+/* Contador de pessoas online */
+.online-users {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.online-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+.online-users span {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .container {
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+
+  .container > *:nth-child(2) {
+    padding: 2rem 1.5rem;
+  }
+
+  .screen {
+    min-height: auto;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .logo-serasa {
+    width: 160px;
+    margin-bottom: 2rem;
+  }
+
+  .btn-verify {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .online-users {
+    padding: 0.6rem 1rem;
+  }
+
+  .online-users span {
+    font-size: 0.85rem;
+  }
+}
